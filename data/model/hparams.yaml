@@ -1,0 +1,43 @@
+act: relu
+batch_size: 1
+coeffs_index: /home/code-base/scratch_space/hdrihaven-ibls-with-sh/name.json
+coeffs_paths: /home/code-base/scratch_space/hdrihaven-ibls-with-sh/sh_scaled_three
+dataset_split: /home/code-base/scratch_space/human-merge-daz-smallset-renderpeople-hdrihaven-768/split.json
+decoder_channels:
+- 512
+- 256
+- 128
+- 64
+- 32
+encoder_channels:
+- 3
+- 64
+- 128
+- 256
+- 512
+exp: 0
+experiment_name: 90humans-hdrihaven
+experiment_version: pretrained_resunet-L1+log
+gpus: -1
+init_weights: true
+input_maps: img_ge, coeffs, mask, albedo, tport_v_mat
+layers_with_dropout: 0
+light_channels:
+- 2048
+- 512
+- 256
+- 128
+lights_dark: /home/code-base/scratch_space/hdrihaven-ibls-with-sh/lights_dark_new_two.json
+log_experiment_path: /home/code-base/user_space/2021logs/clone-0329/
+maps_paths: /home/code-base/scratch_space/human-merge-daz-smallset-renderpeople-hdrihaven-768
+n_res_layers: 2
+n_rotations: 3
+ncoeffs: 25
+norm: none
+num_workers: 8
+optimizer: adamw
+photos_paths: data/test_photos_cropped
+seed: 1953
+shading_max: 10
+target_maps: ''
+upsample: bilinear
