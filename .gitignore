@@ -1,4 +1,4 @@
-./data/model/relighting_model.ckpt
-./__pycache__
-../idea/
-./data/photos_relighted
+data/model/relighting_model.ckpt
+__pycache__
+idea/
+data/photos_relighted
