@@ -3,5 +3,4 @@ pytorch_lightning==1.4.1
 torchvision==0.10.0+cu111
 numpy==1.20.3
 tqdm==4.61.0
-torch==1.9.0+cu111
 Pillow==8.3.1
