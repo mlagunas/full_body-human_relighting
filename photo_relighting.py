@@ -213,6 +213,7 @@ if __name__ == '__main__':
 
     photos_dir = './data/photos'
     light_dir = './data/lights/pisa'
+
     out_relighting_dir = './data/photos_relighted'
     os.makedirs(out_relighting_dir, exist_ok=True)
 
