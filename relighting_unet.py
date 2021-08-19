@@ -251,7 +251,7 @@ class DecoderLight(nn.Module):
         return self.mlp(target_light)
 
     def _make_layers(self, hparams):
-        act_fn = model_utils.activation_func(hparams.act)
+        act_fn = activation_func(hparams.act)
 
         mlp_layers = []
         mlp_layers.append(nn.Linear(hparams.ncoeffs * 3, hparams.encoder_channels[-3]))

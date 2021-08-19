@@ -1,6 +1,7 @@
 import glob
 
 from torch.utils.data.dataset import Dataset
+import torch.nn.functional as F
 from torchvision import transforms
 
 from transforms import to_tensor
@@ -50,6 +51,13 @@ class PhotosDataset(Dataset):
             img = self.transforms(img)
             mask = self.transforms(mask)
 
+        # if the input does not have even dimensions we add one row (or column) of zeros
+        pad_h = [0, 0] if img.shape[1] % 2 == 0 else [1, 0]
+        pad_w = [0, 0] if img.shape[2] % 2 == 0 else [1, 0]
+
+        img = F.pad(img, pad_w + pad_h)
+        mask = F.pad(mask, pad_w + pad_h)
+
         # return image name and the image and mask (w/ format CxWxH)
         return {
             'name': name,
@@ -60,5 +68,3 @@ class PhotosDataset(Dataset):
 
     def __len__(self):
         return len(self.original_paths)
-
-
