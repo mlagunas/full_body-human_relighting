@@ -4,8 +4,8 @@ import numpy as np
 import torch
 import math
 from tqdm import tqdm
-from pl_model import SigasiaSystem
-from photos_dataset import PhotosDataset
+from pl_module import SigasiaSystem
+from dataset import PhotosDataset
 from utils import load_light_from_dir
 from pytorch_lightning.core.saving import load_hparams_from_yaml
 from pytorch_lightning.utilities.parsing import AttributeDict
@@ -35,7 +35,7 @@ def imgs_dir_to_mp4(in_query, output_filename, total_files):
               % (in_query, total_files, output_filename))
 
 
-def log_photos(batch_h, outdir, current_epoch=None):
+def log_photos(batch_h, outdir):
     photo_maps = batch_h.copy()
 
     # NOTE: this assume photo_maps to be a dict with pairs key:map
