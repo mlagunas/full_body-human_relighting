@@ -3,10 +3,10 @@ Implementation of the paper: Single-image Full-body Human Relighting
 
 ### Requirements  
 
-- First make sure that you have Pytorch running in your machine: https://pytorch.org/ (tested with version 1.9).
-- Install all the python dependencies with `pip install -r requirements.txt`.
-- You will need `ffmpeg` in order to generate the relighted videos: `sudo apt install ffmpeg`.
-- Download the pretrained model from [here](https://drive.google.com/file/d/13BZ_etfYeXTCCMr2-Hg8EVKDCDv7Y_YC/view?usp=sharing) and place it under `./data/model/`.
+- First make sure that you have Pytorch running in your machine: https://pytorch.org/ (tested with version 1.9)
+- Install all the python dependencies with `pip install -r requirements.txt`
+- You will need `ffmpeg` in order to generate the relighted videos: `sudo apt install ffmpeg`
+- Download the pretrained model from [here](https://drive.google.com/file/d/13BZ_etfYeXTCCMr2-Hg8EVKDCDv7Y_YC/view?usp=sharing) and place it under `./data/model/`
 
 _Note that this code has been tested out using Ubuntu 20.04_
 
