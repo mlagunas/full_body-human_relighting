@@ -8,7 +8,7 @@ Implementation of the paper: Single-image Full-body Human Relighting
 - You will need `ffmpeg` in order to generate the relighted videos: `sudo apt install ffmpeg`
 - Download the pretrained model from [here](https://drive.google.com/file/d/13BZ_etfYeXTCCMr2-Hg8EVKDCDv7Y_YC/view?usp=sharing) and place it under `./data/model/`
 
-_Note that this code has been tested out using Ubuntu 20.04_
+_Note that this code has been tested out using Ubuntu 20.04 and Python 3.8_
 
 ### Relighting your photos
 
