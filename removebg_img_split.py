@@ -2,12 +2,12 @@ import imageio
 import os
 
 if __name__ == '__main__':
-    input_image_path = 'data/photos_removebg/diego.png'
+    img_path = 'data/photos_removebg/diego.png'
     out_dir = 'data/photos'
 
-    img_rgba = imageio.imread(input_image_path)
+    img_rgba = imageio.imread(img_path)
     assert img_rgba.shape[-1] == 4, 'img is not RGBA'
-    img_name = os.path.basename(input_image_path).split('.')[0]
+    img_name = os.path.basename(img_path).split('.')[0]
 
     img_a = img_rgba[..., -1:]
     img_rgb = img_rgba[..., :-1]
