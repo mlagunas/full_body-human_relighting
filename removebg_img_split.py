@@ -2,7 +2,7 @@ import imageio
 import os
 
 if __name__ == '__main__':
-    img_path = 'data/photos_removebg/diego.png'
+    img_path = 'data/photos_removebg/your_photo.png'
     out_dir = 'data/photos'
 
     img_rgba = imageio.imread(img_path)
