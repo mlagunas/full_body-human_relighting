@@ -8,6 +8,8 @@ Implementation of the paper: Single-image Full-body Human Relighting
 - You will need `ffmpeg` in order to generate the relighted videos: `sudo apt install ffmpeg`.
 - Download the pretrained model from [here](https://drive.google.com/file/d/13BZ_etfYeXTCCMr2-Hg8EVKDCDv7Y_YC/view?usp=sharing) and place it under `./data/model/`.
 
+_Note that this code has been tested out using Ubuntu 20.04_
+
 ### Relighting your photos
 
 Before running `photo_relighting.py`:
@@ -15,6 +17,16 @@ Before running `photo_relighting.py`:
 ```
 photos_dir = './data/photos'
 light_dir = './data/lights/pisa'
+```
+
+Note that the `photos` folder has the following structure. If you want to relight your own images, make sure that they follow the aforementioned structure. To extract the mask from your photographs, you can rely on freely available services such as [that one](https://www.remove.bg/).
+```
+/data/
+ |  photos/
+ |  |  mask/
+ |  |  |  your_photo.png 
+ |  |  original/
+ |  |  |  your_photo.png
 ```
 
 ### Things to be done
