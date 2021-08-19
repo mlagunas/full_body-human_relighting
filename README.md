@@ -19,7 +19,7 @@ photos_dir = './data/photos'
 light_dir = './data/lights/pisa'
 ```
 
-Note that the `photos` folder has the following structure. If you want to relight your own images, make sure that they follow the aforementioned structure. To extract the mask from your photographs, you can rely on freely available services such as [that one](https://www.remove.bg/). Note also that both the mask and the original image should have the same spatial resolution and both, height and width, should have even resolution.
+Note that the `photos` folder has the following structure. If you want to relight your own images, make sure that they follow the aforementioned structure. To extract the mask from your photographs, you can rely on freely available services such as [that one](https://www.remove.bg/). Note also that both the mask and the original image should have the same spatial resolution and both, height and width, should have even resolution. You can use the script `removebg_img_split.py` to automatically split the image you downloaded with the masked background. Make sure that you correctly set the `img_path` and `out_dir` variables.
 ```
 /data/
  |  photos/
