@@ -66,10 +66,8 @@ class SigasiaSystem(pl.LightningModule):
         for k in batch.keys():
             if 'name' not in k:
                 if len(batch[k].shape) == 3:
-                    batch[k] = batch[k].unsqueeze(0)
+                    batch[k] = batch[k].unsqueeze(0).to(self.device)
 
-        batch = self.transfer_batch_to_device(batch, self.device)
-        # batch = roi_crop(batch, pad=20)
         batch['img_sh'] *= batch['mask']
         batch_hat = self.forward(batch)
         batch_hat['img_sh_nospecular'] = self.render_img(batch_hat['shading'], batch_hat['albedo'])
